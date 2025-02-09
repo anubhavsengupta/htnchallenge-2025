@@ -6,9 +6,11 @@ import { TEvent } from "@/app/helpers/types";
 
 const EventList = ({ allEvents }: { allEvents: TEvent[] }) => {
   const [events, setEvents] = useState<TEvent[]>([]);
-  
+
   useEffect(() => {
     if (allEvents && Object.keys(allEvents).length > 0) {
+      // Sort events based on start_time
+      allEvents.sort((a, b) => a.start_time - b.start_time);
       setEvents(allEvents); 
     }
   }, [allEvents]);
@@ -30,7 +32,7 @@ const EventList = ({ allEvents }: { allEvents: TEvent[] }) => {
           <ul
             ref={provided.innerRef}
             {...provided.droppableProps}
-            className="p-4 border rounded w-[400px] mx-auto bg-gray-100 space-y-2"
+            className="p-4 border rounded w-[30%] mx-auto bg-gray-100 space-y-2"
           >
             {events.map((event, index) => (
               <Draggable key={event.id} draggableId={event.id.toString()} index={index}>

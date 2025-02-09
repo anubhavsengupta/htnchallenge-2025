@@ -6,7 +6,7 @@ import { TEvent } from './helpers/types';
 import Navbar from './components/shared-ui/Navbar';
 import SearchBar from './components/events-ui/SearchBar';
 import { SearchProvider } from './context/SearchContext';
-import EventList from './components/events-ui/EventList';
+import Events from './components/events-ui/Events';
 
 export default function Home() {
   const [data, setData] = useState<TEvent[]>([]);
@@ -33,9 +33,8 @@ export default function Home() {
         <div className="p-4">
           <SearchBar />
         </div>
+        <Events allEvents={data}></Events>
     </SearchProvider>
-    <EventList allEvents={data}></EventList>
-      
     </div>
   );
 }
