@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import LoginButton from "./loginbutton";
 import Cookies from "js-cookie";
+import SignOut from "./signout";
 
 const Navbar = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -11,12 +12,12 @@ const Navbar = () => {
     setIsLoggedIn(Cookies.get("loggedIn") === "true");
   }, []);
 
-  if (isLoggedIn) return null; // Hide Navbar when logged in
 
   return (
     <nav className="flex flex-row justify-between items-center p-4 shadow-md">
       <div className="text-xl font-bold">🌟 Logo</div>
-      <LoginButton />
+      {isLoggedIn ? <SignOut></SignOut> : <LoginButton></LoginButton>}
+
     </nav>
   );
 };
