@@ -9,7 +9,7 @@ const Login = () => {
   const router = useRouter();
 
   const handleLogin = async () => {
-    if (email === "test@example.com" && password === "password") {
+    if (email === "hacker" && password === "htn2025") {
       document.cookie = "loggedIn=true; path=/"; // Set a cookie
       router.push("/"); // Redirect after login
     } else {
