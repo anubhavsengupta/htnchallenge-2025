@@ -7,6 +7,7 @@ import Navbar from './components/shared-ui/Navbar';
 import SearchBar from './components/events-ui/SearchBar';
 import { SearchProvider } from './context/SearchContext';
 import Events from './components/events-ui/Events';
+import EventTitle from './components/events-ui/EventTitle';
 
 export default function Home() {
   const [data, setData] = useState<TEvent[]>([]);
@@ -30,6 +31,7 @@ export default function Home() {
     <div className="">
       <Navbar></Navbar>
       <SearchProvider>
+        <EventTitle></EventTitle>
         <div className="p-4">
           <SearchBar />
         </div>

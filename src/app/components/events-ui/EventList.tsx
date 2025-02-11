@@ -7,10 +7,8 @@ const EventList = ({ allEvents }: { allEvents: TEvent[] }) => {
   const [events, setEvents] = useState<TEvent[]>([]);
 
   useEffect(() => {
-    if (allEvents?.length) {
       const sortedEvents = [...allEvents].sort((a, b) => a.start_time - b.start_time);
       setEvents(sortedEvents);
-    }
   }, [allEvents]);
 
   const handleDragEnd = (result: any) => {
