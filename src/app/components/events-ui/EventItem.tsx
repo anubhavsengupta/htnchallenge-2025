@@ -26,14 +26,14 @@ const EventItem: React.FC<EventItemProps> = ({ event, provided, allEvents }) => 
         {...provided.draggableProps}
         {...provided.dragHandleProps}
         className="p-2 border-b bg-white cursor-grab shadow-md rounded-md 
-           transition-all duration-300 ease-in-out 
-           hover:scale-105 hover:shadow-lg hover:shadow-purple-500/50"
+           transition-all duration-300 ease-in-out hover:scale-105
+           hover:scale-105 hover:shadow-lg hover:shadow-purple-700/50"
         onClick={() => {
           setCurrentEvent(event);
           setIsModalOpen(true);
         }} // Open modal on click
       >
-        <h3 className="text-lg font-bold text-purple-400 font-montserrat">{event.name}</h3>
+        <h3 className="text-lg font-bold text-purple-600 font-montserrat leading-tight">{event.name}</h3>
         <p className="text-sm text-gray-500 font-poppins">{convertEventTypeName(event.event_type)}</p>
       </div>
 

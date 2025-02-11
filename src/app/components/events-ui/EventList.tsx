@@ -28,7 +28,7 @@ const EventList = ({ allEvents }: { allEvents: TEvent[] }) => {
           <ul
             ref={provided.innerRef}
             {...provided.droppableProps}
-            className="p-4 border rounded w-[30%] mx-auto bg-gray-100 space-y-2"
+            className="p-4 border rounded w-[60%] sm:w-[30%] mx-auto bg-gray-100 space-y-2"
           >
             {events.map((event, index) => (
               <Draggable key={event.id.toString()} draggableId={event.id.toString()} index={index}>

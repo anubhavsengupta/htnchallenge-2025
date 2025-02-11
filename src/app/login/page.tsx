@@ -18,25 +18,26 @@ const Login = () => {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen bg-gray-900">
+    <div className="flex items-center justify-center h-screen bg-black">
       <div className="bg-gray-100 p-6 rounded shadow-md w-80">
-        <h2 className="text-xl font-bold mb-4 text-center text-black">Login</h2>
+        <h2 className="text-xl font-bold mb-4 text-center font-montserrat text-2xl font-extrabold text-transparent bg-clip-text 
+                       bg-gradient-to-r from-purple-700 to-orange-500 ">Login</h2>
         <input
           type="email"
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="w-full p-2 border rounded mb-2 text-black"
+          className="w-full p-2 border rounded mb-2 text-black mb-0"
         />
-        <p>Value: hacker</p>
+        <p className="text-black opacity-45 mb-2">Value: hacker</p>
         <input
           type="password"
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          className="w-full p-2 border rounded mb-4 text-black"
+          className="w-full p-2 border rounded mb-4 text-black mb-0"
         />
-        <p>Value: htn2025</p>
+        <p className="text-black opacity-45 pt-0 mt-0">Value: htn2025</p>
         <button
           onClick={handleLogin}
           className="w-full p-[2px] rounded mt-4 bg-gradient-to-r from-pink-500 to-orange-400 
