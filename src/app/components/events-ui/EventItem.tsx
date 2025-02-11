@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { DraggableProvided } from "@hello-pangea/dnd";
 import { TEvent } from "@/app/helpers/types";
-
+import { convertEventTypeName } from "../../helpers/helpers";
 interface EventItemProps {
   event: TEvent;
   provided: DraggableProvided;
@@ -32,7 +32,7 @@ const EventItem: React.FC<EventItemProps> = ({ event, provided, allEvents }) => 
         }} // Open modal on click
       >
         <h3 className="text-lg font-bold text-purple-600">{event.name}</h3>
-        <p className="text-sm text-gray-500">{event.event_type}</p>
+        <p className="text-sm text-gray-500">{convertEventTypeName(event.event_type)}</p>
       </div>
 
       {/* Modal */}
@@ -45,7 +45,7 @@ const EventItem: React.FC<EventItemProps> = ({ event, provided, allEvents }) => 
             className="bg-white p-6 rounded shadow-lg w-[80vw] max-w-2xl"
             onClick={(e) => e.stopPropagation()} // prevent modal close on click inside
           >
-            <h2 className="text-2xl font-bold">{currentEvent.name}</h2>
+            <h2 className="text-2xl font-bold text-black">{currentEvent.name}</h2>
             <p className="text-gray-600">{currentEvent.description || "No description available"}</p>
             <p className="mt-2 text-sm text-gray-500">Starts at: {new Date(currentEvent.start_time).toLocaleString()}</p>
             <p className="text-sm text-gray-500">Ends at: {new Date(currentEvent.end_time).toLocaleString()}</p>
@@ -53,7 +53,7 @@ const EventItem: React.FC<EventItemProps> = ({ event, provided, allEvents }) => 
             {/* Related Events Links */}
             {relatedEvents.length > 0 && (
               <div className="mt-4">
-                <h3 className="text-lg font-semibold">Related Events</h3>
+                <h3 className="text-lg font-semibold text-black">Related Events</h3>
                 <ul className="mt-2 space-y-1">
                   {relatedEvents.map((relatedEvent) => (
                     <li
