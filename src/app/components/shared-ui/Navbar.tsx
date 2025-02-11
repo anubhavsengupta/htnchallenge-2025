@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import LoginButton from "./loginbutton";
 import Cookies from "js-cookie";
 import SignOut from "./signout";
+import Image from "next/image";
 
 const Navbar = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -15,7 +16,9 @@ const Navbar = () => {
 
   return (
     <nav className="flex flex-row justify-between items-center p-4 shadow-md">
-      <div className="text-xl font-bold">🌟 Logo</div>
+      <div className="text-xl font-bold">
+        <Image src="/logo.png" alt="logo" width={32} height={32}></Image>
+      </div>
       {isLoggedIn ? <SignOut></SignOut> : <LoginButton></LoginButton>}
 
     </nav>

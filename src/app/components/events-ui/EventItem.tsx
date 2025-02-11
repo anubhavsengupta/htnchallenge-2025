@@ -15,7 +15,7 @@ const EventItem: React.FC<EventItemProps> = ({ event, provided, allEvents }) => 
   const relatedEvents = allEvents.filter((e) => currentEvent?.related_events?.includes(e.id));
 
   const openRelatedEvent = (relatedEvent: TEvent) => {
-    setCurrentEvent(relatedEvent); // Switch the modal content to the selected event
+    setCurrentEvent(relatedEvent); // switch the modal content to the selected event
   };
 
   return (
