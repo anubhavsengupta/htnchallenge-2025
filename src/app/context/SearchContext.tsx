@@ -1,6 +1,10 @@
 import { createContext, useState, useContext, ReactNode } from "react";
 import { SearchContextType } from "../helpers/types";
 
+/**
+ * Context for managing search state across multiple components.
+ * Avoids prop drilling by providing `searchText` and `setSearchText` globally.
+ */
 const SearchContext = createContext<SearchContextType | undefined>(undefined);
 
 export const SearchProvider = ({ children }: { children: ReactNode }) => {

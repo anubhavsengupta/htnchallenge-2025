@@ -28,7 +28,7 @@ export default function Home() {
 
 
   return (
-    <div className="">
+    <>
       <Navbar></Navbar>
       <SearchProvider>
         <EventTitle></EventTitle>
@@ -37,6 +37,6 @@ export default function Home() {
         </div>
         <Events allEvents={data}></Events>
     </SearchProvider>
-    </div>
+    </>
   );
 }

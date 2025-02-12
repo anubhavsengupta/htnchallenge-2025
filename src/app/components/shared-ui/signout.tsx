@@ -5,8 +5,8 @@ import { useRouter } from "next/navigation";
 const SignOut = () => {
     const router = useRouter();
     const handleSignOut = () => {
-        Cookies.remove("loggedIn"); // Remove the cookie
-        window.location.reload(); // Force a full page reload
+        Cookies.remove("loggedIn"); // remove the cookie
+        window.location.reload(); // force a full page reload
       };
     
     return (

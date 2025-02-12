@@ -22,13 +22,13 @@ const FilterTab: React.FC<FilterTabProps> = ({ filters, onFilterChange }) => {
         <button
           key={filter}
           onClick={() => selectFilter(filter)}
-          className={`px-6 py-3 rounded transition-all duration-300 transform hover:-translate-y-1 hover:scale-110 
+          className={`px-4 py-1 sm:px-6 sm:py-3 rounded transition-all duration-300 transform hover:-translate-y-1 hover:scale-110 
                       border-2 border-orange-300 shadow-md hover:shadow-lg font-poppins 
                       hover:shadow-[inset_2px_2px_6px_rgba(0,0,0,0.1),6px_6px_20px_rgba(255,105,180,0.5)]
                       ${
                         activeFilter === filter
-                          ? "bg-white text-black"  // Active state
-                          : "bg-black text-white hover:bg-gray-900" // Default state
+                          ? "bg-white text-black"  // active state
+                          : "bg-black text-white hover:bg-gray-900" // default state
                       }`}
         >
           {convertEventTypeName(filter)}
