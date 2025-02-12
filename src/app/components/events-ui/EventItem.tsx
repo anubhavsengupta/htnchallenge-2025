@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useState } from "react";
 import { DraggableProvided } from "@hello-pangea/dnd";
 import { TEvent } from "@/app/helpers/types";
@@ -26,8 +28,8 @@ const EventItem: React.FC<EventItemProps> = ({ event, provided, allEvents }) => 
         {...provided.draggableProps}
         {...provided.dragHandleProps}
         className="p-2 border-b bg-white cursor-grab shadow-md rounded-md 
-           transition-all duration-300 ease-in-out hover:scale-105
-           hover:scale-105 hover:shadow-lg hover:shadow-purple-700/50"
+        hover:shadow-lg hover:shadow-purple-700/50 
+        transition-shadow duration-300 ease-in-out"
         onClick={() => {
           setCurrentEvent(event);
           setIsModalOpen(true);
