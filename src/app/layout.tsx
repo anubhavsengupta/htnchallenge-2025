@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Hackathon Global Inc",
-  description: "A modern Next.js application",
+  description: "HTN 2025 challenge submission",
   icons: "/logo.png",
 };
 
