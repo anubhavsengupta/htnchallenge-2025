@@ -37,7 +37,7 @@ const EventItem: React.FC<EventItemProps> = ({ event, provided, allEvents }) => 
           setIsModalOpen(true);
         }} // Open modal on click
       >
-        <h3 className="text-lg font-bold text-purple-600 font-montserrat leading-tight">{event.name}</h3>
+        <h3 className="text-lg font-bold text-blue-600 font-montserrat leading-tight">{event.name}</h3>
         <div className="flex flex-row">
           <p className="text-sm text-gray-500 font-poppins">{convertEventTypeName(event.event_type)}</p>
         </div>
@@ -103,6 +103,8 @@ const EventItem: React.FC<EventItemProps> = ({ event, provided, allEvents }) => 
           <p className="text-black font-inter text-sm">{currentEvent.description || "No description available"}</p>
 
           {/* Speakers */}
+          {currentEvent.speakers.length > 0 && (
+            <>
           <h2 className="text-xl font-bold text-black mt-4">Speakers</h2> 
           <div className="ml-2 px-1 border-2 border-orange-200 rounded-full inline-block bg-orange-100">
             <ul className="space-y-1">
@@ -113,6 +115,8 @@ const EventItem: React.FC<EventItemProps> = ({ event, provided, allEvents }) => 
               ))}
             </ul>
           </div>
+          </>
+          )}
 
           {/* Related Events Links */}
           {relatedEvents.length > 0 ? (

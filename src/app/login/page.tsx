@@ -18,7 +18,7 @@ const Login = () => {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen bg-black">
+    <div className="flex items-center justify-center h-screen bg-black " aria-label="Login">
       <div className="bg-gray-100 p-6 rounded shadow-md w-80">
         <h2 className="text-xl font-bold mb-4 text-center font-montserrat text-2xl font-extrabold text-transparent bg-clip-text 
                        bg-gradient-to-r from-purple-700 to-orange-500 ">Login</h2>
