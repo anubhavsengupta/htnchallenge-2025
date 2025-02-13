@@ -11,6 +11,13 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export const metadata = {
+  title: "Hackathon Global Inc",
+  description: "A modern Next.js application",
+  icons: "/logo.png",
+};
+
+
 
 export default function RootLayout({
   children,
